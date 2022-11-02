@@ -6,4 +6,4 @@ app.use(express.json());
 
 const PORT = '3001';
 
-app.listen(PORT, (req, res) => console.log(`Rodando na porta ${PORT}`));
+app.listen(PORT, () => console.log(`Rodando na porta ${PORT}`));
