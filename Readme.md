@@ -16,6 +16,7 @@ Inicie a aplicação com o nodemon.
 
     npm start
 
+**Obs.:** Caso queira salvar sua resolução no seu GitHub faça o `Fork` deste repositório antes de realizar o clone e substitua no primeiro comando a chave SSH que agora deve ser a do seu repositório.
 
 ## 📚 Exercitando
 
@@ -35,7 +36,7 @@ A requisição deve retornar o status `200` e um array com todos os livros da bi
         "title": "Capitães da Areia",
         "author": "Jorge Amado",
         "release": "1937"
-       }
+     }
   
   
 </details>
@@ -50,7 +51,7 @@ A requisição deve retornar o status `201` e os dados do novo livro que foi ins
         "title": "Capitães da Areia",
         "author": "Jorge Amado",
         "release": "1937"
-       }
+      }
   
   
 </details>
@@ -68,7 +69,7 @@ O livro `1984 de George Orwell` está com o ano de lançamento errado e precisam
           "title": "1984",
           "author": "George Orwell",
           "release": "1949"
-        }
+       }
   
 </details>
 
@@ -100,7 +101,7 @@ O livro `1984 de George Orwell` está com o ano de lançamento errado e precisam
 Ao pesquisar pela rota `/books/search?author=ge` deve retornar o status `200` e um array com todos os autores que satisfaçam a pesquisa.
 
 <details>
-  <summary>O retorno esperado</summary>
+  <summary>O retorno esperado para a pesquisa por "ge"</summary>
   
      [
         {
@@ -126,11 +127,19 @@ Ao pesquisar pela rota `/books/search?author=ge` deve retornar o status `200` e 
 
   Para as operações de `PUT`e `POST`, onde o usuário fornece dados no body da requisição, faça a validação destes dados utilizando middlewares.
   
-  Caso algum campo esteja faltando, retorne o status `400` com o seguinte modelo de mensagem.
+  Caso algum campo esteja faltando retorne o status `400` com o seguinte modelo de mensagem.
   
         {
-          message: "O campo \" nome-do-campo-aqui\" é obrigatório"
+          message: "O campo \"nome-do-campo-aqui\" é obrigatório"
         }
+        
+        
+## Resolução
+
+Para verificar uma proposta de solução aos exercícios acima entre na branch `solved-exercises` utilizando o comando abaixo.
+
+        git checkout solved-exercises
+ 
 
   --- 
   
