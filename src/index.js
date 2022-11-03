@@ -8,7 +8,7 @@ const app = express();
 
 app.use(express.json());
 
-const PORT = '3009';
+const PORT = '3001';
 app.listen(PORT, () => console.log(`Rodando na porta ${PORT}`));
 
 const booksFile = path.resolve(__dirname, './books.json');
