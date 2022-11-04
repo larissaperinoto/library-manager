@@ -57,9 +57,9 @@ app.put('/books/:id', async (req, res) => {
   const { id } = req.params;
   const booksJson = await fs.readFile(booksFile, 'utf-8');
   const books = JSON.parse(booksJson);
-  const bookToUpdate = books.find((book) => book.id === id);
-  const bookUpdated = { id: bookToUpdate.id, ...req.body };
-  const newBooksFile = books.map((book) => book.id === id ? bookUpdated : book);
+  const newBooksFile = books
+    .map((book) => book.id === id ? { id: book.id, ...req.body } : book);
+  const response = newBooksFile[id - 1];
   await fs.writeFile(booksFile, JSON.stringify(newBooksFile));
-  res.status(200).json(bookUpdated);
+  res.status(200).json(response);
 });
