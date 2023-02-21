@@ -143,3 +143,4 @@ Para verificar uma proposta de solução aos exercícios acima entre na branch `
 
   ---
 
+Desenvolvido por [Larissa Perinoto](www.linkedin.com/in/larissaperinoto), © 2022.
